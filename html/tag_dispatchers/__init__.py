@@ -1,8 +1,8 @@
 # encoding: utf-8
 import re
-from docx.api import Document
+from docx.document import Document
 from docx.table import _Cell
-from docx.text import Paragraph
+from docx.text.paragraph import Paragraph
 
 
 class TagDispatcher(object):

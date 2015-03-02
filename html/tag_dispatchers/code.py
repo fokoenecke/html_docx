@@ -1,5 +1,4 @@
 # encoding: utf-8
-from docx.text import Paragraph
 from mindboard.helpers.docx.html.tag_dispatchers import TagDispatcher
 
 
@@ -21,10 +20,7 @@ class CodeDispatcher(TagDispatcher):
         <code> Creates a specially styled run inside the given container.
         """
         #TODO find out how to monospace in oodocx
-        monospace_style = 'NoSpacing'
-
         paragraph = cls.get_new_paragraph(container)
         paragraph.text = text
-        paragraph.style = monospace_style
 
         return paragraph

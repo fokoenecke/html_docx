@@ -1,8 +1,4 @@
 # encoding: utf-8
-from docx.table import _Cell
-
-from docx.text import Paragraph
-
 from mindboard.helpers.docx.html.tag_dispatchers import TagDispatcher, replace_whitespaces
 
 
@@ -29,7 +25,7 @@ class ParagraphDispatcher(TagDispatcher):
         if not text:
             return container
 
-        style = 'Normal'
+        style = None
         if element.getparent().tag == 'blockquote':
             style = 'IntenseQuote'
 
